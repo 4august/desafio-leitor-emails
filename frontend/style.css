@@ -1,0 +1,49 @@
+body {
+  background-color: #fffafa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: Roboto;
+}
+
+button {
+  padding: 4px 8px;
+  width: fit-content;
+  margin: auto;
+}
+
+form {
+  display: grid;
+  gap: 20px;
+}
+
+#container {
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  padding: 20px;
+  width: 40rem;
+}
+
+#drag-drop-area {
+  background-color: #ffffff;
+  padding: 12px;
+  border-radius: 8px;
+  width: 80%;
+  margin: auto;
+  border: 2px dashed #333;
+  border-radius: 16px;
+  padding: 12px;
+  height: 10rem;
+  display: flex;
+}
+
+#drag-drop-area input {
+  display: none;
+}
+
+#drag-drop-area label {
+  margin: auto;
+}
