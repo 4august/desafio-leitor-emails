@@ -9,23 +9,33 @@
 </head>
 
 <body>
-
     <h1>Leitor Automático de Emails</h1>
     <div id="container">
-        <p>Insira abaixo o documento que seja do tipo 
-            <strong>.txt</strong> ou 
-            <strong>.pdf</strong>
+        <p>
+            Insira abaixo o documento que seja do tipo 
+            <strong>.txt</strong> ou <strong>.pdf</strong>
+            para que seja gerada uma resposta automática
         </p>
 
         <form action="">
-            <div id="drag-drop-area">
-                <input type="file" name="filePdfTxt" id="filePdfTxt">
-                <label class="button" for="filePdfTxt">Selecionar Arquivo</label>
+            <div>
+                <div id="file-area">
+                    <input type="file" name="filePdfTxt" id="filePdfTxt">
+                    <label for="filePdfTxt">Selecionar Arquivo</label>
+                </div>
+                <span id="error" class="hidden"></span>
             </div>
 
             <button type="submit">Enviar</button>
         </form>
-
     </div>
+    <div>
+        <h2 class="hidden"></h2>
+        <div id="response-container">
+        </div>
+        
+    </div>
+    <script type="module" src="js/schema.js"></script>
+    <script type="module" src="js/index.js"></script>
 </body>
 </html>
