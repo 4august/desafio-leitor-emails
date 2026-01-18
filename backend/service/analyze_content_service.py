@@ -12,8 +12,7 @@ def get_text_generation_pipeline():
             if _text_generation_pipeline is None:
                 _text_generation_pipeline = pipeline(
                     task="text-generation",
-                    model="TinyLlama/TinyLlama-1.1B-Chat-v1.0",
-                    device_map="auto"
+                    model="TinyLlama/TinyLlama-1.1B-Chat-v1.0"
                 )
     return _text_generation_pipeline
 
@@ -38,8 +37,8 @@ Resposta:
 
     result = pipe(
         prompt,
-        max_new_tokens=100,
-        do_sample=True,
+        max_new_tokens=60,
+        do_sample=False,
         temperature=0.6,
         top_p=0.9,
         repetition_penalty=1.1
