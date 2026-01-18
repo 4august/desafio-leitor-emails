@@ -75,7 +75,7 @@ class Controller {
       this.titleResposta.classList.remove("hidden");
       this.button.classList.add("hidden");
 
-      const response = await fetch(`http://127.0.0.1:8000/upload-file`, {
+      const response = await fetch(`http://localhost:8000/upload-file`, {
         method: "POST",
         body: formData,
       });
