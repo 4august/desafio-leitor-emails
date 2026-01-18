@@ -1,5 +1,4 @@
 import schema from "./schema.js";
-import { API_URL } from "./config.js";
 
 class Controller {
   constructor() {
@@ -76,13 +75,10 @@ class Controller {
       this.titleResposta.classList.remove("hidden");
       this.button.classList.add("hidden");
 
-      const response = await fetch(
-        `${API_URL ?? "http://127.0.0.1:8000"}/upload-file`,
-        {
-          method: "POST",
-          body: formData,
-        },
-      );
+      const response = await fetch(`http://127.0.0.1:8000/upload-file`, {
+        method: "POST",
+        body: formData,
+      });
 
       const result = await response.json();
       this.renderAutomaticResponse(result);
